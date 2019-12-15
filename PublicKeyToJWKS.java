@@ -17,41 +17,11 @@ public class PublicKeyToJWKS {
 
         BufferedWriter bw1 = new BufferedWriter(new FileWriter(pub));
         bw1.write("-----BEGIN CERTIFICATE-----\n" +
-                        "MIIFpjCCBI6gAwIBAgIEWf9qjjANBgkqhkiG9w0BAQsFADBEMQswCQYDVQQGEwJH\n" +
-                        "QjEUMBIGA1UEChMLT3BlbkJhbmtpbmcxHzAdBgNVBAMTFk9wZW5CYW5raW5nIElz\n" +
-                        "c3VpbmcgQ0EwHhcNMTkwNjEyMTUzNDUwWhcNMjEwNjEyMTYwNDUwWjBhMQswCQYD\n" +
-                        "VQQGEwJHQjEUMBIGA1UEChMLT3BlbkJhbmtpbmcxGzAZBgNVBAsTEjAwMTU4MDAw\n" +
-                        "MDE2aTQ0akFBQTEfMB0GA1UEAxMWMXF0MDZFdXpIUU9PdTJDS25vMzA0VDCCASIw\n" +
-                        "DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM4ehOEM/t4p6/FpPl9tpDy1AlCX\n" +
-                        "AwPzeP/k0SDstTXdmbXG3di4EKXWm3t/zwSyi4kNSWPbh5v+5FlMdCoM4Y8m9PKC\n" +
-                        "ghuJ7rTeigmXMLiD1Opw441vDs7LtAspXb2GOwkcjODZQC7v4rlfLdOff7Ms3I+w\n" +
-                        "Mu3R68z6RWtOkbI+oceqhMWkCZ7FJKk5jqtGon/DJrMfG/xfxY+GnuBaWe9MTA9o\n" +
-                        "IISMTklqmdnOKay1V3rfi8F5wd+GGIk/xJVyjlSgHbV5NhjdLyfhY6zz5+quaLG+\n" +
-                        "Ffz/7gep9M/t72mkCmutxQfS81rn9LqZ/w4DvdQSH7vzvjt7iQRaO/N49QkCAwEA\n" +
-                        "AaOCAoEwggJ9MA4GA1UdDwEB/wQEAwIHgDAgBgNVHSUBAf8EFjAUBggrBgEFBQcD\n" +
-                        "AQYIKwYBBQUHAwIwggFSBgNVHSAEggFJMIIBRTCCAUEGCysGAQQBqHWBBgEBMIIB\n" +
-                        "MDA1BggrBgEFBQcCARYpaHR0cDovL29iLnRydXN0aXMuY29tL3Byb2R1Y3Rpb24v\n" +
-                        "cG9saWNpZXMwgfYGCCsGAQUFBwICMIHpDIHmVGhpcyBDZXJ0aWZpY2F0ZSBpcyBz\n" +
-                        "b2xlbHkgZm9yIHVzZSB3aXRoIE9wZW4gQmFua2luZyBMaW1pdGVkIGFuZCBhc3Nv\n" +
-                        "Y2lhdGVkIE9wZW4gQmFua2luZyBTZXJ2aWNlcy4gSXRzIHJlY2VpcHQsIHBvc3Nl\n" +
-                        "c3Npb24gb3IgdXNlIGNvbnN0aXR1dGVzIGFjY2VwdGFuY2Ugb2YgdGhlIE9wZW4g\n" +
-                        "QmFua2luZyBMaW1pdGVkIENlcnRpZmljYXRlIFBvbGljeSBhbmQgcmVsYXRlZCBk\n" +
-                        "b2N1bWVudHMgdGhlcmVpbi4wcgYIKwYBBQUHAQEEZjBkMCYGCCsGAQUFBzABhhpo\n" +
-                        "dHRwOi8vb2IudHJ1c3Rpcy5jb20vb2NzcDA6BggrBgEFBQcwAoYuaHR0cDovL29i\n" +
-                        "LnRydXN0aXMuY29tL3Byb2R1Y3Rpb24vaXNzdWluZ2NhLmNydDA/BgNVHR8EODA2\n" +
-                        "MDSgMqAwhi5odHRwOi8vb2IudHJ1c3Rpcy5jb20vcHJvZHVjdGlvbi9pc3N1aW5n\n" +
-                        "Y2EuY3JsMB8GA1UdIwQYMBaAFJ9Jv042p6zDDyvIR/QfKRvAeQsFMB0GA1UdDgQW\n" +
-                        "BBR1q3FOJ/xApPTL6B89dEijpgMIcjANBgkqhkiG9w0BAQsFAAOCAQEAOqm/tUcC\n" +
-                        "JmSXlesGVrdppwfMFm5SMQxbFP/59OAr29Qo8X5wt2zzk/XHh3Kv8Ls2A/TrPjVq\n" +
-                        "Dyrxcc0g8P1Fo47VLHZLP7cI9gxDWKnss1GN4v7p0HuPPXGIOO7twm3hMUoENAJK\n" +
-                        "7muWJDhFVboyg0l1AYsOUYnh92NazwxAIzU+0ezPBgevL8l/+Xt9hPJCmWAms+ZT\n" +
-                        "0fJtWiLuZg/L+ucxxhNClkPLaqm0WygplVAlt+Ep/AnusoQUc5v24ITimNg+4HF4\n" +
-                        "BVdlEZgMC99sYazxjmUNfiQ3rXlfrJlwIfOgfRpLBVZubUUVtuJ/ZkjfezIa7H9c\n" +
-                        "VZbEwHiH36Q/Ug==\n" +
+                        "" +
                         "-----END CERTIFICATE-----");
         bw1.close();
 
-        KeyStore jks = PemReader.createKeyStore("cert_alias", pub, "intuit01");
+        KeyStore jks = PemReader.createKeyStore("cert_alias", pub, "secret");
 
         JWKSet jwkFromPem = getJwkFromPem(jks);
 
